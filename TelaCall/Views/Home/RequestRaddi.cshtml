@@ -1,0 +1,252 @@
+﻿@{
+    ViewBag.Title = "Request Raddi";
+    Layout = "~/Views/Shared/_homeLayout.cshtml";
+}
+
+
+
+<script src="~/Assets/js/jquery-2.2.3.min.js"></script>
+
+@*<link href="~/Assets/css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="~/Assets/js/bootstrap-datetime.js" charset="UTF-8"></script>*@
+<style>
+    /*select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}*/
+    /*.select option:hover {
+    background-color: yellow;
+}*/
+    
+         .close.topx{    margin-top: -15px;
+    margin-right: -5px;
+}
+    .alert-danger {
+color: #b94a48;
+background-color: #f2dede;
+border-color: #eed3d7;
+}
+.alert-Message {
+border-width: 1px;
+padding: 15px;
+border: 1px solid transparent;
+margin-bottom: 20px;
+}
+
+button.close {
+padding: 0;
+cursor: pointer;
+background: transparent;
+border: 0;
+-webkit-appearance: none;
+}
+
+.close {
+float: right;
+font-size: 21px;
+font-weight: bold;
+line-height: 1;
+color: #000;
+text-shadow: 0 1px 0 #fff;
+opacity: .2;
+filter: alpha(opacity=20);
+}
+.display-hide{
+    display:none;
+}
+
+    .boldoption { font-weight: bold; 
+                  background-color:#168eea;
+    }
+    .ddproperty {
+
+        width: 100%;
+border-radius: 0;
+line-height: 22px;
+font-size: 14px;
+padding: 14px 17px 14px;
+outline: none;
+color: #FFF;
+height: 50px;
+border: 1px solid #424141;
+margin: 0 0 20px;
+background: none;
+letter-spacing: 1px;
+    }
+
+    .btnsubmit{
+        padding: 13px 30px;
+border: 2px solid #168eea;
+font-size: 16px;
+color: #fff;
+background: #168eea;
+text-decoration: none;
+outline: none;
+transition: 0.5s all;
+-webkit-transition: 0.5s all;
+-moz-transition: 0.5s all;
+-o-transition: 0.5s all;
+-ms-transition: 0.5s all;
+letter-spacing: 1px;
+    }
+</style>
+<div class="contact" >
+    <div id="particles-js2"></div>
+    <div class="">
+
+
+        <h3 class="title-w3 con">Request Kabadd</h3>
+        <p class="sub-text">Choose Your Style</p>
+
+        <form action="#" method="post" class="contact_form slideanim">
+
+            <div class="message">
+                <div class="col-md-6 col-sm-6 grid_6 c1">
+                    <input type="text" class="margin-right" Name="Name" placeholder="Name" id="nametxt" required="">
+                    <input type="text" Name="Email" class="margin-right" placeholder="Email" required="" id="emailtxt">
+                    <input type="text" class="margin-right" Name="Phone Number" placeholder="Phone Number" id="Mobiletxt" required="">
+                    @*<input type="text" class="margin-right" Name="Phone Number" placeholder="Phone Number" required="">*@
+                </div>
+
+                <div class="col-md-6 col-sm-6 grid_6 c1">
+                    
+                    <select id="ddtype" class="margin-right ddproperty">
+                         <option class="boldoption" selected="selected" value="0">Select Type of kabad</option>
+                       
+                        <option class="boldoption" value="1">Iron</option>
+                        <option class="boldoption" value="2">Paper</option>
+                        <option class="boldoption" value="3">Plastic</option>
+                        <option class="boldoption" value="4">Steel</option>
+                        <option class="boldoption" value="5">Alumunium</option>
+                        <option class="boldoption" value="6">Books</option>
+                        <option class="boldoption" value="7">NewsPaper</option>
+                        <option class="boldoption" value="8">Bottel</option>
+                    </select>
+                    <select id="ddlLocation" class="margin-right ddproperty" >
+                        <option class="boldoption" selected="selected" value="0">Select your location</option>
+
+                        <option class="boldoption" value="1">Noida </option>
+                        <option class="boldoption" value="2">Delhi</option>
+                        <option class="boldoption" value="3">Gurgaon</option>
+                        <option class="boldoption" value="4">Faridabad</option>
+                        <option class="boldoption" value="5">Ghaziabad</option>
+                        @*<option class="boldoption" value="6">Iron</option>*@
+                    </select>
+                   
+                    <textarea name="Message" placeholder="Message" required="" id="commentstxt"></textarea>
+                    <div class="Error alert-Message alert-danger display-hide">
+                        <button class="close" data-close="alert">x</button>
+                        <span id="spnErrorMessage" class="spnErrorMessage"></span>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <input type="button" id="submit" class="btnsubmit" value="SEND MESSAGE">
+        </form>
+        <section class="social">
+            <ul>
+                <li><a class="icon fb" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="icon tw" href="#"><i class="fa fa-twitter"></i></a></li>
+
+
+                <li><a class="icon pin" href="#"><i class="fa fa-pinterest"></i></a></li>
+                <li><a class="icon db" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="icon gp" href="#"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+        </section>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+       
+        $("#submit").click(function () {
+            
+            var hasError = false;
+            var emailReg = /^([\w-\.]+@@([\w-]+\.)+[\w-]{2,4})?$/;
+            var emailaddressVal = $("#emailtxt").val();
+            var phoneVal = $("#Mobiletxt").val();
+            var name = $('#nametxt').val();
+            var Message = $("#commentstxt").val();
+            var ItemType = $('#ddtype').val();
+            var Location = $("#ddlLocation").val()
+         
+           
+            $('.Error').removeClass('display').addClass('display-hide')
+            $('.Success').removeClass('display').addClass('display-hide')
+
+             if (name == "") {
+                $('.Error').removeClass('display-hide').addClass('display')
+                $('.spnErrorMessage').html('<strong>Error:</strong>Please enter your name.')
+                hasError = true;
+                $('#submit').show();
+            }
+            else if (hasError == false && emailaddressVal == '') {
+                $('.Error').removeClass('display-hide').addClass('display')
+                $('.spnErrorMessage').html('<strong>Error:</strong>Please enter your email.')
+                hasError = true;
+                $('#submit').show();
+            }
+            else if (hasError == false && !emailReg.test(emailaddressVal)) {
+                $('.Error').removeClass('display-hide').addClass('display')
+                $('.spnErrorMessage').html('<strong>Error:</strong>Please enter a valid email id.')
+                 hasError = true;
+                $('#submit').show();
+            }
+            else if (hasError == false && phoneVal == '') {
+                $('.Error').removeClass('display-hide').addClass('display')
+                $('.spnErrorMessage').html('<strong>Error:</strong>Please enter your phone number.')
+                 hasError = true;
+                $('#submit').show();
+            }
+            else if (hasError == false && (phoneVal.length > 13 || phoneVal.length < 8 || phoneVal.indexOf('123456789') > -1 || isNaN(phoneVal))) {
+                $('.Error').removeClass('display-hide').addClass('display')
+                $('.spnErrorMessage').html('<strong>Error:</strong>Please enter a valid phone number.')
+                hasError = true;
+                $('#submit').show();
+            }
+            else if (ItemType == 0) {
+                $('.Error').removeClass('display-hide').addClass('display')
+                $('.spnErrorMessage').html('<strong>Error:</strong>Please select Kabbad type.')
+                hasError = true;
+                $('#submit').show();
+            }
+            else if (Location == 0) {
+                $('.Error').removeClass('display-hide').addClass('display')
+                $('.spnErrorMessage').html('<strong>Error:</strong>Please select  your Location.')
+                hasError = true;
+                $('#submit').show();
+            }
+            else if (Message == "") {
+                $('.Error').removeClass('display-hide').addClass('display')
+                $('.spnErrorMessage').html('<strong>Error:</strong>Please enter your Message.')
+                hasError = true;
+                $('#submit').show();
+            }
+             if (hasError == false) {
+                
+                $('#submit').hide();
+                var url = "/Home/KabadRequest";
+                $.post(url, { Name: name, Email: emailaddressVal, phone: phoneVal, Message: Message,LocationId: Location,ItemTypeId: ItemType }, function (data) {
+
+                    if ((data.Status) == "Success") {
+                        $('.Error').removeClass('display').addClass('display-hide')
+                        $('.Success').removeClass('display-hide').addClass('display')
+                        $('.spnSuccessMessage').html('<strong>Successful:</strong> ' + data.Message)
+                        $(':input', '#form').not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected');
+                        $('#submit').show();
+                    }
+                    else if ((data.Status) == "Failure") {
+                        $('.Success').removeClass('display').addClass('display-hide')
+                        $('.Error').removeClass('display-hide').addClass('display')
+                        $('.spnErrorMessage').html('<strong>Error:</strong> ' + data.Message)
+                        $('#submit').show();
+                    }
+                });
+            }
+        });
+    });
+
+</script>

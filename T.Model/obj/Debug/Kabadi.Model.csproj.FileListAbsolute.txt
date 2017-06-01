@@ -1,0 +1,7 @@
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Debug\Kabadi.Model.dll
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Debug\Kabadi.Model.pdb
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Debug\BizBrolly.Util.dll
+F:\MVC\RaddiWalla\TalaCall\T.Model\obj\Debug\Kabadi.Model.dll
+F:\MVC\RaddiWalla\TalaCall\T.Model\obj\Debug\Kabadi.Model.pdb
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Debug\log4net.dll
+F:\MVC\RaddiWalla\TalaCall\T.Model\obj\Debug\Kabadi.Model.csprojResolveAssemblyReference.cache

@@ -1,0 +1,17 @@
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Release\Kabadi.Model.dll
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Release\Kabadi.Model.pdb
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Release\BizBrolly.Util.dll
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Release\System.Web.Razor.dll
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Release\System.Web.WebPages.Razor.dll
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Release\System.Web.WebPages.dll
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Release\Microsoft.Web.Infrastructure.dll
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Release\System.Web.WebPages.Deployment.dll
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Release\System.Web.Mvc.xml
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Release\System.Web.Razor.xml
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Release\System.Web.WebPages.Razor.xml
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Release\System.Web.WebPages.xml
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Release\Microsoft.Web.Infrastructure.xml
+F:\MVC\RaddiWalla\TalaCall\T.Model\bin\Release\System.Web.WebPages.Deployment.xml
+F:\MVC\RaddiWalla\TalaCall\T.Model\obj\Release\Kabadi.Model.csprojResolveAssemblyReference.cache
+F:\MVC\RaddiWalla\TalaCall\T.Model\obj\Release\Kabadi.Model.dll
+F:\MVC\RaddiWalla\TalaCall\T.Model\obj\Release\Kabadi.Model.pdb
